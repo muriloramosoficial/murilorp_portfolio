@@ -40,35 +40,80 @@ class _MainMenuState extends State<MainMenu> {
               padding: const EdgeInsets.only(right: 30),
               child: Row(
                 children: [
-                  Container(
-                      decoration: BoxDecoration(
-                          border: Border(
-                              left: BorderSide(
-                                  color: Color.fromARGB(255, 37, 37, 37)))),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          // Navigation Here
-                          Padding(
-                            padding: const EdgeInsets.only(left: 30, right: 25),
-                            child: Icon(
-                              FontAwesomeIcons.linkedin,
-                              color: Colors.white,
-                            ),
-                          ),
-                          IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              FontAwesomeIcons.github,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ],
-                      )),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 30),
+                    child: TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'Sobre Mim'.toUpperCase(),
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                  MeusProjetos(),
+                  IconsMenu(),
                 ],
               ),
             )
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class IconsMenu extends StatelessWidget {
+  const IconsMenu({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        decoration: BoxDecoration(
+            border: Border(
+                left: BorderSide(color: Color.fromARGB(255, 37, 37, 37)))),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            // Navigation Here
+            Padding(
+              padding: const EdgeInsets.only(left: 30, right: 25),
+              child: Icon(
+                FontAwesomeIcons.linkedin,
+                color: Colors.white,
+              ),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(
+                FontAwesomeIcons.github,
+                color: Colors.white,
+              ),
+            ),
+          ],
+        ));
+  }
+}
+
+class MeusProjetos extends StatelessWidget {
+  const MeusProjetos({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(right: 30),
+      child: TextButton(
+        onPressed: () {},
+        child: Text(
+          'MEUS PROJETOS'.toUpperCase(),
+          style: TextStyle(
+            color: Colors.white70,
+          ),
         ),
       ),
     );
